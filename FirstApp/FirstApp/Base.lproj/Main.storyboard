@@ -17,17 +17,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAv-0b-8XB">
-                                <rect key="frame" x="121.66666666666669" y="408.66666666666669" width="150" height="35"/>
+                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="I9T-oE-JR9"/>
+                                    <constraint firstAttribute="height" constant="35" id="tf8-uk-URR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Buttondfgsfgdfg"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="buttonTapped2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PP-8R-f2R"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyU-2e-DLQ">
+                                <rect key="frame" x="136" y="451" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nyU-2e-DLQ" firstAttribute="top" secondItem="LAv-0b-8XB" secondAttribute="bottom" constant="7.3333333333333144" id="hJm-Ah-s2U"/>
+                            <constraint firstItem="nyU-2e-DLQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lzc-ht-LFE"/>
                             <constraint firstItem="LAv-0b-8XB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mmQ-jY-Bbx"/>
                             <constraint firstItem="LAv-0b-8XB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vvr-A2-DFk"/>
                         </constraints>
