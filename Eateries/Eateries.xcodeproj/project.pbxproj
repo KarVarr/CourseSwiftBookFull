@@ -12,6 +12,7 @@
 		179A0F8C297C2BF100127C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179A0F8A297C2BF100127C00 /* Main.storyboard */; };
 		179A0F8E297C2BF300127C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179A0F8D297C2BF300127C00 /* Assets.xcassets */; };
 		179A0F91297C2BF300127C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179A0F8F297C2BF300127C00 /* LaunchScreen.storyboard */; };
+		179A0F99297C2C8A00127C00 /* EateriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A0F98297C2C8A00127C00 /* EateriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		179A0F8D297C2BF300127C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179A0F90297C2BF300127C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179A0F92297C2BF300127C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179A0F98297C2C8A00127C00 /* EateriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				179A0F84297C2BF100127C00 /* AppDelegate.swift */,
 				179A0F86297C2BF100127C00 /* SceneDelegate.swift */,
+				179A0F98297C2C8A00127C00 /* EateriesTableViewController.swift */,
 				179A0F8A297C2BF100127C00 /* Main.storyboard */,
 				179A0F8D297C2BF300127C00 /* Assets.xcassets */,
 				179A0F8F297C2BF300127C00 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179A0F85297C2BF100127C00 /* AppDelegate.swift in Sources */,
+				179A0F99297C2C8A00127C00 /* EateriesTableViewController.swift in Sources */,
 				179A0F87297C2BF100127C00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
