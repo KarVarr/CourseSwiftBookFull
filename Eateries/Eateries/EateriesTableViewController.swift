@@ -9,7 +9,7 @@ import UIKit
 
 class EateriesTableViewController: UITableViewController {
 
-    let restaurants = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
+    let restaurantsNames = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
        
        let restaurantesImages = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
     
@@ -32,18 +32,22 @@ class EateriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return restaurantsNames.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesTableViewCell
+        cell.thumbnailImageVIew.image = UIImage(named: restaurantesImages[indexPath.row])
+        cell.thumbnailImageVIew.layer.cornerRadius = cell.thumbnailImageVIew.frame.size.height / 2
+        cell.thumbnailImageVIew.clipsToBounds = true
+        cell.thumbnailImageVIew.contentMode = .scaleAspectFill
+        cell.nameLabel.text = restaurantsNames[indexPath.row].capitalized
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
