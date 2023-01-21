@@ -31,27 +31,20 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-y3-fmg">
-                                            <rect key="frame" x="95" y="9" width="207" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="IKK-rZ-vIo"/>
-                                            </constraints>
+                                            <rect key="frame" x="90" y="9" width="212" height="22"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKN-g2-k5k">
-                                            <rect key="frame" x="95" y="33" width="207" height="18"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="Yug-Up-6WC"/>
-                                            </constraints>
+                                            <rect key="frame" x="88" y="33" width="214" height="18"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X4-FC-NCe">
-                                            <rect key="frame" x="95" y="54" width="207" height="21"/>
+                                            <rect key="frame" x="88" y="54" width="214" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="0bR-SA-Xwu"/>
                                                 <constraint firstAttribute="height" constant="21" id="3yY-ct-Mia"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
@@ -60,16 +53,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JKN-g2-k5k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="2yP-je-DVd"/>
+                                        <constraint firstItem="JKN-g2-k5k" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="2yP-je-DVd"/>
                                         <constraint firstAttribute="trailing" secondItem="JKN-g2-k5k" secondAttribute="trailing" constant="91" id="Bj4-pf-3c1"/>
-                                        <constraint firstItem="3X4-FC-NCe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="FwP-iR-cyb"/>
+                                        <constraint firstItem="3X4-FC-NCe" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="FwP-iR-cyb"/>
                                         <constraint firstAttribute="trailing" secondItem="ot3-y3-fmg" secondAttribute="trailing" constant="91" id="HTH-4g-8HH"/>
                                         <constraint firstItem="3X4-FC-NCe" firstAttribute="top" secondItem="JKN-g2-k5k" secondAttribute="bottom" constant="3" id="ICh-av-5JC"/>
                                         <constraint firstItem="JKN-g2-k5k" firstAttribute="top" secondItem="ot3-y3-fmg" secondAttribute="bottom" constant="2" id="KPp-F4-Sld"/>
                                         <constraint firstAttribute="trailing" secondItem="3X4-FC-NCe" secondAttribute="trailing" constant="91" id="UdW-EY-FcO"/>
                                         <constraint firstAttribute="bottom" secondItem="Ufo-vq-DcN" secondAttribute="bottom" constant="10" id="koz-cj-lGT"/>
                                         <constraint firstAttribute="bottom" secondItem="3X4-FC-NCe" secondAttribute="bottom" constant="10" id="wWd-th-qi9"/>
-                                        <constraint firstItem="ot3-y3-fmg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="y9o-6b-dtm"/>
+                                        <constraint firstItem="ot3-y3-fmg" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="10" id="y9o-6b-dtm"/>
                                         <constraint firstItem="Ufo-vq-DcN" firstAttribute="leading" secondItem="b87-8i-JrV" secondAttribute="leading" constant="15" id="zOM-Un-lR3"/>
                                     </constraints>
                                 </tableViewCellContentView>

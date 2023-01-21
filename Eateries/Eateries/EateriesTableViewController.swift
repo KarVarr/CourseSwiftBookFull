@@ -50,19 +50,28 @@ class EateriesTableViewController: UITableViewController {
         return cell
     }
     
-    func showAlert(_ number: String) {
-        let ac = UIAlertController(title: nil, message: "Choose action", preferredStyle: .actionSheet)
-        let callAction = UIAlertAction(title: "Call \(number)", style: .default)
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        ac.addAction(callAction)
-        ac.addAction(cancel)
-        present(ac, animated: true)
-    }
+   
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(phoneNumbers[indexPath.row])
+        let ac = UIAlertController(title: nil, message: "Choose action", preferredStyle: .actionSheet)
+        let call = UIAlertAction(title: "Call \(phoneNumbers[indexPath.row])", style: .default) { ac in
+            let ac = UIAlertController(title: "Warning", message: "You can't call on this phone number", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self.present(ac, animated: true)
+        }
+        
+        let isVisited = UIAlertAction(title: "Pin Place", style: .default) { ac in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark 
+          
+        }
+            
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        ac.addAction(call)
+        ac.addAction(isVisited)
+        ac.addAction(cancel)
+        present(ac, animated: true)
     }
 
 }
