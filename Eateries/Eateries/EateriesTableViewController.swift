@@ -9,7 +9,9 @@ import UIKit
 
 class EateriesTableViewController: UITableViewController {
 
-    
+    let restaurants = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
+       
+       let restaurantesImages = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class EateriesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
