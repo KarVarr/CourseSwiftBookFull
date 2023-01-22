@@ -83,17 +83,40 @@ class EateriesTableViewController: UITableViewController {
         present(ac, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
-        forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+    //        forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete {
+    //            self.restaurantesImages.remove(at: indexPath.row)
+    //            self.restaurantsNames.remove(at: indexPath.row)
+    //            self.restaurantIsVisited.remove(at: indexPath.row)
+    //            self.phoneNumbers.remove(at: indexPath.row)
+    //        }
+    ////        tableView.reloadData()
+    //        tableView.deleteRows(at: [indexPath], with: .fade)
+    //    }
+    
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let share = UITableViewRowAction(style: .default, title: "Share") { (action, indexPath) in
+            let defaultText = "Right now i'm in " + self.restaurantsNames[indexPath.row]
+            if let image = UIImage(named: self.restaurantesImages[indexPath.row]) {
+                let activityController = UIActivityViewController(activityItems: [defaultText, image], applicationActivities: nil)
+                self.present(activityController, animated:  true)
+            }
+        }
+        
+        let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
             self.restaurantesImages.remove(at: indexPath.row)
             self.restaurantsNames.remove(at: indexPath.row)
             self.restaurantIsVisited.remove(at: indexPath.row)
             self.phoneNumbers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
-//        tableView.reloadData()
-        tableView.deleteRows(at: [indexPath], with: .fade)
+        share.backgroundColor = .magenta
+        delete.backgroundColor = .cyan
+        return [delete, share]
     }
+    
     
     
 }
