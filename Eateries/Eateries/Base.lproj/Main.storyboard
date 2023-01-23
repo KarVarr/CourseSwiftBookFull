@@ -103,31 +103,40 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="38" id="cnU-cO-jGm" customClass="EateryDetailTableViewCell" customModule="Eateries" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="38" id="cnU-cO-jGm" customClass="EateryDetailTableViewCell" customModule="Eateries" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="355" width="393" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cnU-cO-jGm" id="3rL-sL-y9s">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="108" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-BO-Mfu">
-                                                    <rect key="frame" x="0.0" y="8" width="182.66666666666666" height="23"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-BO-Mfu">
+                                                    <rect key="frame" x="20" y="7.6666666666666679" width="353" height="23"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slu-Iy-2Zi" userLabel="Key">
-                                                            <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="23"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="23"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-O5-EbT">
-                                                            <rect key="frame" x="143.66666666666666" y="0.0" width="39" height="23"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-O5-EbT">
+                                                            <rect key="frame" x="107" y="0.0" width="246" height="23"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="slu-Iy-2Zi" firstAttribute="width" secondItem="Cd3-BO-Mfu" secondAttribute="width" multiplier="0.3" id="pcV-qc-oDR"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Cd3-BO-Mfu" firstAttribute="centerX" secondItem="3rL-sL-y9s" secondAttribute="centerX" id="RSF-G8-vzU"/>
+                                                <constraint firstAttribute="trailing" secondItem="Cd3-BO-Mfu" secondAttribute="trailing" constant="20" id="YeI-mo-beB"/>
+                                                <constraint firstItem="Cd3-BO-Mfu" firstAttribute="leading" secondItem="3rL-sL-y9s" secondAttribute="leading" constant="20" id="jWg-W8-Yzw"/>
+                                                <constraint firstItem="Cd3-BO-Mfu" firstAttribute="centerY" secondItem="3rL-sL-y9s" secondAttribute="centerY" id="ogl-bR-fDY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="keyValue" destination="slu-Iy-2Zi" id="Oct-cs-PGh"/>
@@ -135,6 +144,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OFZ-LH-Lvp" id="4UO-RL-fvR"/>
+                                    <outlet property="delegate" destination="OFZ-LH-Lvp" id="fRa-vH-JT9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wc9-Rh-HD7"/>
@@ -149,6 +162,7 @@
                     <navigationItem key="navigationItem" id="J7e-n1-eJ5"/>
                     <connections>
                         <outlet property="imageView" destination="tyY-ZJ-8OX" id="wHE-ac-83J"/>
+                        <outlet property="tableView" destination="HFk-HL-JLP" id="P1U-qm-Pcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxY-Ld-aot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
