@@ -68,10 +68,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="locationLabel" destination="JKN-g2-k5k" id="iKP-DM-oyr"/>
-                                    <outlet property="nameLabel" destination="ot3-y3-fmg" id="4Ej-pl-F7I"/>
-                                    <outlet property="thumbnailImageVIew" destination="Ufo-vq-DcN" id="E2k-ce-mBD"/>
-                                    <outlet property="typeLabel" destination="3X4-FC-NCe" id="xdp-f5-Ql6"/>
+                                    <outlet property="locationLabel" destination="JKN-g2-k5k" id="L3j-FO-5zc"/>
+                                    <outlet property="nameLabel" destination="ot3-y3-fmg" id="kpK-Qt-pvK"/>
+                                    <outlet property="thumbnailImageView" destination="Ufo-vq-DcN" id="zSp-vz-4vC"/>
+                                    <outlet property="typeLabel" destination="3X4-FC-NCe" id="ukL-Yq-JQ7"/>
                                     <segue destination="OFZ-LH-Lvp" kind="show" identifier="detailSegue" id="4uc-2C-Aqf"/>
                                 </connections>
                             </tableViewCell>
@@ -95,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAl-sS-YwU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAl-sS-YwU">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                             </imageView>
                         </subviews>
@@ -110,7 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="J7e-n1-eJ5"/>
                     <connections>
-                        <outlet property="imageView" destination="BAl-sS-YwU" id="gwP-68-uEa"/>
+                        <outlet property="imageView" destination="BAl-sS-YwU" id="Tyy-DZ-eZG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxY-Ld-aot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

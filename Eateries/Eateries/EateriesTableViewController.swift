@@ -9,13 +9,25 @@ import UIKit
 
 class EateriesTableViewController: UITableViewController {
     
-    var restaurantsNames = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
+    var restaurants: [Restaurant] = [
+        Restaurant (name: "Ogonëk Grill&Bar", type: "ресторан", location: "Уф", image: "ogonek.jpg", isVisited: false, phoneNumbers: "+1 304 987 00"),
+        Restaurant (name: "Елу", type: "ресторан", location: "Уфа", image: "elu.jpg", isVisited: false, phoneNumbers: "+1 304 456 12"),
+        Restaurant (name:"Bonsai", type: "ресторан", location: "ya", image: "bonsai.jpg", isVisited: false, phoneNumbers: "+1 456 333 86"),
+        Restaurant (name:"Дастархан", type: "ресторан", location: "Уф", image: "dastarhan.jpg", isVisited: false, phoneNumbers: "+1 304 300 98"),
+        Restaurant (name: "Индокитай", type: "ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false, phoneNumbers: "+1 877 908 66"),
+        Restaurant (name: "X.O", type: "ресторан-клуб", location: "ya", image: "x.o.jpg", isVisited: false, phoneNumbers: "+1 666 567 56"),
+        Restaurant (name: "Балкан Гриль", type: "ресторан", location: "Уф", image: "balkan.jpg", isVisited: false, phoneNumbers: "+1 987 87 87"),
+        Restaurant (name: "Respublica", type: "ресторан", location: "ya", image: "respublika.jpg", isVisited: false, phoneNumbers: "+1 545 563 44"),
+        Restaurant (name: "Speak Easy", type: "ресторанный комплекс",location: "Уфа", image: "speakeasy.jpg", isVisited: false, phoneNumbers: "+1 311 323 81"),
+        Restaurant (name: "Morris Pub", type: "ресторан", location: "ф", image: "morris.jpg", isVisited: false, phoneNumbers: "+1 388 888 36"),
+        Restaurant (name: "Вкусные истории", type: "ресторан", location: "ф", image: "istorii.jpg", isVisited: false, phoneNumbers: "+1 304 456 83"),
+        Restaurant (name: "Классик", type: "ресторан", location: "Y@a", image: "klassik.jpg", isVisited: false, phoneNumbers: "+1 777 366 84"),
+        Restaurant (name: "Love&Life", type: "ресторан", location: "ф", image: "love.jpg", isVisited: false, phoneNumbers: "+1 123 345 55"),
+        Restaurant (name: "Шок", type: "ресторан", location: "Уф", image: "shok.jpg", isVisited: false, phoneNumbers: "+1 456 443 33"),
+        Restaurant (name: "Бочка", type: "ресторан", location: "фа", image: "bochka.jpg", isVisited: false, phoneNumbers: "+1 304 333 86"),
+    ]
     
-    var restaurantesImages = ["balkan","bochka","bonsai","dastarhan","elu","indokitay","istorii","klassik","love","morris","ogonek","respublika","shok","speakeasy","x.o"]
     
-    var restaurantIsVisited = [Bool](repeatElement(false, count: 15))
-    
-    var phoneNumbers = ["+1 304 333 86", "+1 456 443 33", "+1 123 345 55","+1 777 366 84","+1 304 456 83","+1 388 888 36","+1 311 323 81","+1 545 563 44","+1 987 87 87","+1 666 567 56","+1 877 908 66","+1 304 300 98","+1 456 333 86","+1 304 456 12","+1 304 987 00",]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +48,19 @@ class EateriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurantsNames.count
+        return restaurants.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesTableViewCell
-        cell.thumbnailImageVIew.image = UIImage(named: restaurantesImages[indexPath.row])
-        cell.thumbnailImageVIew.layer.cornerRadius = cell.thumbnailImageVIew.frame.size.height / 2
-        cell.thumbnailImageVIew.clipsToBounds = true
-        cell.thumbnailImageVIew.contentMode = .scaleAspectFill
-        cell.nameLabel.text = restaurantsNames[indexPath.row].capitalized
+        cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
+        cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.height / 2
+        cell.thumbnailImageView.clipsToBounds = true
+        cell.thumbnailImageView.contentMode = .scaleAspectFill
+        cell.nameLabel.text = restaurants[indexPath.row].name
         
-        cell.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
+        cell.accessoryType = self.restaurants[indexPath.row].isVisited ? .checkmark : .none
         
         cell.selectionStyle = .none
         
@@ -60,18 +72,18 @@ class EateriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ac = UIAlertController(title: nil, message: "Choose action", preferredStyle: .actionSheet)
         
-        let call = UIAlertAction(title: "Call \(phoneNumbers[indexPath.row])", style: .default) { ac in
+        let call = UIAlertAction(title: "Call \(restaurants[indexPath.row].phoneNumbers)", style: .default) { ac in
             let ac = UIAlertController(title: "Warning", message: "You can't call on this phone number", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
             self.present(ac, animated: true)
         }
         
-        let isVisitedTitle = self.restaurantIsVisited[indexPath.row] ?  "Delete Pin" : "Pin Place"
+        let isVisitedTitle = self.restaurants[indexPath.row].isVisited ?  "Delete Pin" : "Pin Place"
         
         let isVisited = UIAlertAction(title: isVisitedTitle, style: .default) { ac in
             let cell = tableView.cellForRow(at: indexPath)
-            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
+            self.restaurants[indexPath.row].isVisited = !self.restaurants[indexPath.row].isVisited
+            cell?.accessoryType = self.restaurants[indexPath.row].isVisited ? .checkmark : .none
             
         }
         
@@ -81,6 +93,8 @@ class EateriesTableViewController: UITableViewController {
         ac.addAction(isVisited)
         ac.addAction(cancel)
         present(ac, animated: true)
+        
+        
     }
     
     //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
@@ -98,18 +112,15 @@ class EateriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let share = UITableViewRowAction(style: .default, title: "Share") { (action, indexPath) in
-            let defaultText = "Right now i'm in " + self.restaurantsNames[indexPath.row]
-            if let image = UIImage(named: self.restaurantesImages[indexPath.row]) {
+            let defaultText = "Right now i'm in " + self.restaurants[indexPath.row].name
+            if let image = UIImage(named: self.restaurants[indexPath.row].image) {
                 let activityController = UIActivityViewController(activityItems: [defaultText, image], applicationActivities: nil)
                 self.present(activityController, animated:  true)
             }
         }
         
         let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
-            self.restaurantesImages.remove(at: indexPath.row)
-            self.restaurantsNames.remove(at: indexPath.row)
-            self.restaurantIsVisited.remove(at: indexPath.row)
-            self.phoneNumbers.remove(at: indexPath.row)
+            self.restaurants.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         share.backgroundColor = .magenta
@@ -117,6 +128,13 @@ class EateriesTableViewController: UITableViewController {
         return [delete, share]
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dvc = segue.destination as! EateriesDetailViewController
+                dvc.imageName = self.restaurants[indexPath.row].image
+            }
+        }
+    }
     
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class EateriesDetailViewController: UIViewController {
 
+    
     @IBOutlet weak var imageView: UIImageView!
     var imageName = ""
     
@@ -17,6 +18,7 @@ class EateriesDetailViewController: UIViewController {
         super.viewDidLoad()
         
         imageView.image = UIImage(named: imageName)
+        
     }
     
 
@@ -31,3 +33,5 @@ class EateriesDetailViewController: UIViewController {
     */
 
 }
+
+
