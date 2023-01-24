@@ -13,7 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.backgroundColor = .brown
+        navigationBarAppearace.tintColor = .red
+        navigationBarAppearace.barTintColor = .orange
+        
+        if let barFont = UIFont(name: "AppleSDGothicNeo-Light", size: 24) {
+            navigationBarAppearace.titleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                           NSAttributedString.Key.font: barFont]
+        }
+        
         return true
     }
 

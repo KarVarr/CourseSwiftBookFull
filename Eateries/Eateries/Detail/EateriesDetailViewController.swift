@@ -10,7 +10,7 @@ import UIKit
 class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     var restaurant: Restaurant?
@@ -21,9 +21,13 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
         
         imageView.image = UIImage(named: restaurant!.image)
         
+        //tableView.backgroundColor = .orange
+        tableView.separatorColor = .magenta
+        
+        title = restaurant!.name
     }
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -47,6 +51,7 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
         default:
             break
         }
+        //cell.backgroundColor = .gray
         
         return cell
     }
@@ -54,7 +59,7 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
 }
 
 
