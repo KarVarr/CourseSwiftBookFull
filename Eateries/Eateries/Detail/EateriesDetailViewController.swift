@@ -13,13 +13,13 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
-    var imageName = ""
+    var restaurant: Restaurant?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = UIImage(named: imageName)
+        imageView.image = UIImage(named: restaurant!.image)
         
     }
     
@@ -31,10 +31,28 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateryDetailTableViewCell
         
-        cell.keyValue.text = "some text"
-        cell.valueLabel.text = "some value text"
+        switch indexPath.row {
+        case 0 :
+            cell.keyValue.text = "Name"
+            cell.valueLabel.text = restaurant!.name
+        case 1 :
+            cell.keyValue.text = "Type"
+            cell.valueLabel.text = restaurant!.type
+        case 2:
+            cell.keyValue.text = "Address"
+            cell.valueLabel.text = restaurant!.location
+        case 3 :
+            cell.keyValue.text = "I was there?"
+            cell.valueLabel.text = restaurant!.isVisited ? "Yes" : "No"
+        default:
+            break
+        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
