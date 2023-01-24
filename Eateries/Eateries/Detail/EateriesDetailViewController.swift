@@ -15,6 +15,10 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var imageView: UIImageView!
     var restaurant: Restaurant?
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

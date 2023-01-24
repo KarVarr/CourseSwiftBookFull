@@ -27,7 +27,9 @@ class EateriesTableViewController: UITableViewController {
         Restaurant (name: "Бочка", type: "Ресторан", location: "Москва", image: "bochka.jpg", isVisited: false, phoneNumbers: "+1 304 333 86"),
     ]
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.hidesBarsOnSwipe = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
