@@ -32,19 +32,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-y3-fmg">
-                                            <rect key="frame" x="90" y="9" width="212" height="22"/>
+                                            <rect key="frame" x="90" y="9" width="303" height="22"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKN-g2-k5k">
-                                            <rect key="frame" x="88" y="33" width="214" height="18"/>
+                                            <rect key="frame" x="88" y="33" width="305" height="18"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X4-FC-NCe">
-                                            <rect key="frame" x="88" y="54" width="214" height="21"/>
+                                            <rect key="frame" x="88" y="54" width="305" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="3yY-ct-Mia"/>
                                             </constraints>
@@ -55,12 +55,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="JKN-g2-k5k" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="2yP-je-DVd"/>
-                                        <constraint firstAttribute="trailing" secondItem="JKN-g2-k5k" secondAttribute="trailing" constant="91" id="Bj4-pf-3c1"/>
+                                        <constraint firstAttribute="trailing" secondItem="JKN-g2-k5k" secondAttribute="trailing" id="Bj4-pf-3c1"/>
                                         <constraint firstItem="3X4-FC-NCe" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="8" symbolic="YES" id="FwP-iR-cyb"/>
-                                        <constraint firstAttribute="trailing" secondItem="ot3-y3-fmg" secondAttribute="trailing" constant="91" id="HTH-4g-8HH"/>
+                                        <constraint firstAttribute="trailing" secondItem="ot3-y3-fmg" secondAttribute="trailing" id="HTH-4g-8HH"/>
                                         <constraint firstItem="3X4-FC-NCe" firstAttribute="top" secondItem="JKN-g2-k5k" secondAttribute="bottom" constant="3" id="ICh-av-5JC"/>
                                         <constraint firstItem="JKN-g2-k5k" firstAttribute="top" secondItem="ot3-y3-fmg" secondAttribute="bottom" constant="2" id="KPp-F4-Sld"/>
-                                        <constraint firstAttribute="trailing" secondItem="3X4-FC-NCe" secondAttribute="trailing" constant="91" id="UdW-EY-FcO"/>
+                                        <constraint firstAttribute="trailing" secondItem="3X4-FC-NCe" secondAttribute="trailing" id="UdW-EY-FcO"/>
                                         <constraint firstAttribute="bottom" secondItem="Ufo-vq-DcN" secondAttribute="bottom" constant="10" id="koz-cj-lGT"/>
                                         <constraint firstAttribute="bottom" secondItem="3X4-FC-NCe" secondAttribute="bottom" constant="10" id="wWd-th-qi9"/>
                                         <constraint firstItem="ot3-y3-fmg" firstAttribute="leading" secondItem="Ufo-vq-DcN" secondAttribute="trailing" constant="10" id="y9o-6b-dtm"/>
@@ -111,16 +111,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-BO-Mfu">
-                                                    <rect key="frame" x="20" y="7.6666666666666679" width="353" height="23"/>
+                                                    <rect key="frame" x="20" y="7.6666666666666661" width="353" height="22.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slu-Iy-2Zi" userLabel="Key">
-                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="23"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="22.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-O5-EbT">
-                                                            <rect key="frame" x="107" y="0.0" width="246" height="23"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-O5-EbT">
+                                                            <rect key="frame" x="107" y="0.0" width="246" height="22.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -132,8 +132,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Cd3-BO-Mfu" secondAttribute="bottom" constant="7.6666666666666643" id="CiW-Fw-XLK"/>
                                                 <constraint firstItem="Cd3-BO-Mfu" firstAttribute="centerX" secondItem="3rL-sL-y9s" secondAttribute="centerX" id="RSF-G8-vzU"/>
                                                 <constraint firstAttribute="trailing" secondItem="Cd3-BO-Mfu" secondAttribute="trailing" constant="20" id="YeI-mo-beB"/>
+                                                <constraint firstItem="Cd3-BO-Mfu" firstAttribute="top" secondItem="3rL-sL-y9s" secondAttribute="top" constant="7.6666666666666679" id="h1C-uX-T2q"/>
                                                 <constraint firstItem="Cd3-BO-Mfu" firstAttribute="leading" secondItem="3rL-sL-y9s" secondAttribute="leading" constant="20" id="jWg-W8-Yzw"/>
                                                 <constraint firstItem="Cd3-BO-Mfu" firstAttribute="centerY" secondItem="3rL-sL-y9s" secondAttribute="centerY" id="ogl-bR-fDY"/>
                                             </constraints>

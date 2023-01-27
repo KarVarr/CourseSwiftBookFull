@@ -26,13 +26,16 @@ class ViewController: UIViewController {
     }()
     
     let button: UIButton = {
-       let button = UIButton()
+        var button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("PUSH", for: .normal)
         button.backgroundColor = .magenta
+        //button.layer.cornerRadius = 20
+        
+        
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,13 +65,13 @@ class ViewController: UIViewController {
     }
     
     func setupButton() {
-        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        //button.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: view1.trailingAnchor).isActive = true
+        button.trailingAnchor.constraint(equalTo: view2.leadingAnchor).isActive = true
+        button.topAnchor.constraint(equalTo: view2.bottomAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+        
     }
-
-
+    
+    
 }
 

@@ -23,6 +23,9 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.estimatedRowHeight = 38
+        tableView.rowHeight = UITableView.automaticDimension
+        
         imageView.image = UIImage(named: restaurant!.image)
         
         //tableView.backgroundColor = .orange
