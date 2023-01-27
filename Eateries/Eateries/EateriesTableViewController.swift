@@ -10,7 +10,7 @@ import UIKit
 class EateriesTableViewController: UITableViewController {
     
     var restaurants: [Restaurant] = [
-        Restaurant (name: "Ogonëk Grill&Bar", type: "Ресторан", location: "Москва, бульвар Рокосовского Маяковского", image: "ogonek.jpg", isVisited: false, phoneNumbers: "+1 304 987 00"),
+        Restaurant (name: "Ogonëk Grill&Bar", type: "Ресторан", location: "Москва, бульвар Рокосовского Маяковского, дом 12. Вход со стороны улицы", image: "ogonek.jpg", isVisited: false, phoneNumbers: "+1 304 987 00"),
         Restaurant (name: "Елу", type: "Ресторан", location: "Москва", image: "elu.jpg", isVisited: false, phoneNumbers: "+1 304 456 12"),
         Restaurant (name:"Bonsai", type: "Ресторан", location: "Москва", image: "bonsai.jpg", isVisited: false, phoneNumbers: "+1 456 333 86"),
         Restaurant (name:"Дастархан", type: "Ресторан", location: "Москва", image: "dastarhan.jpg", isVisited: false, phoneNumbers: "+1 304 300 98"),
@@ -33,6 +33,11 @@ class EateriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 85
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         // Uncomment the following line to preserve selection between presentations
