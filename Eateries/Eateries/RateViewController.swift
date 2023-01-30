@@ -37,8 +37,8 @@ class RateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttonArray = [badButton, goodButton, brilliantButton]
-        buttonArray.map{$0?.transform = CGAffineTransform(scaleX: 0, y: 0)}
+        
+        _ = [badButton, goodButton, brilliantButton].map{$0?.transform = CGAffineTransform(scaleX: 0, y: 0)}
         // Do any additional setup after loading the view.
         
         let blurEffect = UIBlurEffect(style: .light)

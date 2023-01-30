@@ -11,9 +11,9 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     
     @IBOutlet weak var rateButton: UIButton!
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var mapButton: UIButton!
     var restaurant: Restaurant?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,10 +23,12 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _ = [rateButton, mapButton].map{
+            $0.layer.cornerRadius = 5
+            $0.layer.borderWidth = 1
+            $0.layer.borderColor = UIColor.white.cgColor
+        }
         
-        rateButton.layer.cornerRadius = 5
-        rateButton.layer.borderWidth = 1
-        rateButton.layer.borderColor = UIColor.white.cgColor
         
         tableView.estimatedRowHeight = 38
         tableView.rowHeight = UITableView.automaticDimension

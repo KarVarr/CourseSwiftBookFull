@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,6 +85,36 @@
             </objects>
             <point key="canvasLocation" x="492" y="-75"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="hcw-BW-fSi">
+            <objects>
+                <viewController id="YHm-aj-ea9" customClass="MapViewController" customModule="Eateries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idx-UV-WT3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJw-hM-pnY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="je9-Li-QsP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iJw-hM-pnY" firstAttribute="top" secondItem="je9-Li-QsP" secondAttribute="top" id="0zm-vr-CP0"/>
+                            <constraint firstItem="iJw-hM-pnY" firstAttribute="leading" secondItem="je9-Li-QsP" secondAttribute="leading" id="3Zp-Ml-eRc"/>
+                            <constraint firstItem="iJw-hM-pnY" firstAttribute="trailing" secondItem="je9-Li-QsP" secondAttribute="trailing" id="bdA-Tc-vZb"/>
+                            <constraint firstAttribute="bottom" secondItem="iJw-hM-pnY" secondAttribute="bottom" id="u42-hd-PXP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="iJw-hM-pnY" id="vAp-0r-mn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMx-Qz-7ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317" y="-801"/>
+        </scene>
         <!--Eateries Detail View Controller-->
         <scene sceneID="JCz-c5-5gy">
             <objects>
@@ -155,10 +186,21 @@
                                     <constraint firstAttribute="width" secondItem="K9e-RI-jys" secondAttribute="height" multiplier="75:77" id="lvk-la-bYY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="good" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="good" title="" imagePadding="0.0">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="sCm-kZ-4YH" kind="presentation" modalPresentationStyle="fullScreen" id="0Qb-y9-eYE"/>
+                                    <segue destination="YHm-aj-ea9" kind="presentation" identifier="mapSegue" modalPresentationStyle="fullScreen" id="kqb-nI-NO1"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-Ci-JFf">
+                                <rect key="frame" x="302" y="198" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YoQ-Ci-JFf" secondAttribute="height" multiplier="1:1" id="Mhl-Ge-7ub"/>
+                                    <constraint firstAttribute="height" constant="75" id="nxI-E2-xPC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="map"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wc9-Rh-HD7"/>
@@ -167,15 +209,19 @@
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="trailing" secondItem="wc9-Rh-HD7" secondAttribute="trailing" id="1vJ-Ft-wcC"/>
                             <constraint firstItem="wc9-Rh-HD7" firstAttribute="trailing" secondItem="K9e-RI-jys" secondAttribute="trailing" constant="16" id="3GR-xO-QoC"/>
                             <constraint firstItem="K9e-RI-jys" firstAttribute="top" secondItem="wc9-Rh-HD7" secondAttribute="top" constant="10" id="7QQ-Yb-aqH"/>
+                            <constraint firstItem="YoQ-Ci-JFf" firstAttribute="top" secondItem="K9e-RI-jys" secondAttribute="bottom" constant="8" symbolic="YES" id="AAg-18-qsr"/>
                             <constraint firstAttribute="bottom" secondItem="HFk-HL-JLP" secondAttribute="bottom" id="Tg3-Ms-mvV"/>
+                            <constraint firstItem="YoQ-Ci-JFf" firstAttribute="leading" secondItem="wc9-Rh-HD7" secondAttribute="leading" constant="302" id="Tnx-AU-amm"/>
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="top" secondItem="wc9-Rh-HD7" secondAttribute="top" id="ao5-yU-LIe"/>
                             <constraint firstItem="K9e-RI-jys" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wc9-Rh-HD7" secondAttribute="leading" symbolic="YES" id="fSK-W7-hnN"/>
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="leading" secondItem="wc9-Rh-HD7" secondAttribute="leading" id="kDr-ko-Rxr"/>
+                            <constraint firstItem="wc9-Rh-HD7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YoQ-Ci-JFf" secondAttribute="trailing" id="lO6-LA-j9n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J7e-n1-eJ5"/>
                     <connections>
                         <outlet property="imageView" destination="tyY-ZJ-8OX" id="wHE-ac-83J"/>
+                        <outlet property="mapButton" destination="YoQ-Ci-JFf" id="9Nw-dy-H8x"/>
                         <outlet property="rateButton" destination="K9e-RI-jys" id="BNP-ds-lSZ"/>
                         <outlet property="tableView" destination="HFk-HL-JLP" id="P1U-qm-Pcb"/>
                     </connections>
@@ -299,6 +345,7 @@
         <image name="brilliant" width="85" height="85"/>
         <image name="close" width="50" height="50"/>
         <image name="good" width="85" height="85"/>
+        <image name="map" width="50" height="50"/>
         <image name="rateBackground" width="200" height="286"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
