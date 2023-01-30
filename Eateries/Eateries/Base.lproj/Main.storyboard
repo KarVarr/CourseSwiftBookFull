@@ -149,11 +149,25 @@
                                     <outlet property="delegate" destination="OFZ-LH-Lvp" id="fRa-vH-JT9"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9e-RI-jys">
+                                <rect key="frame" x="302" y="113" width="75" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Bw6-hi-yDy"/>
+                                    <constraint firstAttribute="width" secondItem="K9e-RI-jys" secondAttribute="height" multiplier="75:77" id="lvk-la-bYY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="good" title=""/>
+                                <connections>
+                                    <segue destination="sCm-kZ-4YH" kind="presentation" modalPresentationStyle="fullScreen" id="0Qb-y9-eYE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wc9-Rh-HD7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="trailing" secondItem="wc9-Rh-HD7" secondAttribute="trailing" id="1vJ-Ft-wcC"/>
+                            <constraint firstItem="wc9-Rh-HD7" firstAttribute="trailing" secondItem="K9e-RI-jys" secondAttribute="trailing" constant="16" id="3GR-xO-QoC"/>
+                            <constraint firstItem="K9e-RI-jys" firstAttribute="top" secondItem="wc9-Rh-HD7" secondAttribute="top" constant="10" id="7QQ-Yb-aqH"/>
                             <constraint firstAttribute="bottom" secondItem="HFk-HL-JLP" secondAttribute="bottom" id="Tg3-Ms-mvV"/>
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="top" secondItem="wc9-Rh-HD7" secondAttribute="top" id="ao5-yU-LIe"/>
                             <constraint firstItem="HFk-HL-JLP" firstAttribute="leading" secondItem="wc9-Rh-HD7" secondAttribute="leading" id="kDr-ko-Rxr"/>
@@ -162,12 +176,53 @@
                     <navigationItem key="navigationItem" id="J7e-n1-eJ5"/>
                     <connections>
                         <outlet property="imageView" destination="tyY-ZJ-8OX" id="wHE-ac-83J"/>
+                        <outlet property="rateButton" destination="K9e-RI-jys" id="BNP-ds-lSZ"/>
                         <outlet property="tableView" destination="HFk-HL-JLP" id="P1U-qm-Pcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxY-Ld-aot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318.3206106870227" y="-75.352112676056336"/>
+            <point key="canvasLocation" x="1316.793893129771" y="-75.352112676056336"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RSj-3Q-GrN">
+            <objects>
+                <viewController id="sCm-kZ-4YH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fXV-9S-5Ar">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rateBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-CD-jLA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPJ-nL-jsw">
+                                <rect key="frame" x="314" y="75" width="63" height="55"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="close"/>
+                                <connections>
+                                    <segue destination="Pgs-iw-8XF" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Wwk-TE-4OU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qt2-mi-pkI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MPJ-nL-jsw" firstAttribute="top" secondItem="qt2-mi-pkI" secondAttribute="top" constant="16" id="C95-zO-Cug"/>
+                            <constraint firstItem="gGN-CD-jLA" firstAttribute="top" secondItem="qt2-mi-pkI" secondAttribute="top" id="Cpw-g2-ZUH"/>
+                            <constraint firstItem="qt2-mi-pkI" firstAttribute="trailing" secondItem="MPJ-nL-jsw" secondAttribute="trailing" constant="16" id="FQk-4g-sZu"/>
+                            <constraint firstItem="qt2-mi-pkI" firstAttribute="bottom" secondItem="MPJ-nL-jsw" secondAttribute="bottom" constant="688" id="THp-h7-Top"/>
+                            <constraint firstItem="gGN-CD-jLA" firstAttribute="trailing" secondItem="qt2-mi-pkI" secondAttribute="trailing" id="cAX-gr-jVo"/>
+                            <constraint firstAttribute="bottom" secondItem="gGN-CD-jLA" secondAttribute="bottom" id="cGo-xS-D0G"/>
+                            <constraint firstItem="gGN-CD-jLA" firstAttribute="leading" secondItem="qt2-mi-pkI" secondAttribute="leading" id="fCK-Yd-qiK"/>
+                            <constraint firstItem="MPJ-nL-jsw" firstAttribute="leading" secondItem="qt2-mi-pkI" secondAttribute="leading" constant="314" id="pVa-gI-1Bq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nV1-eb-XI7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TQ-s6-GgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Pgs-iw-8XF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2174.8091603053435" y="-75.352112676056336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cXo-3a-W3E">
@@ -189,6 +244,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="50" height="50"/>
+        <image name="good" width="85" height="85"/>
+        <image name="rateBackground" width="200" height="286"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

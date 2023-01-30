@@ -10,6 +10,7 @@ import UIKit
 class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var rateButton: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +23,10 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rateButton.layer.cornerRadius = 5
+        rateButton.layer.borderWidth = 1
+        rateButton.layer.borderColor = UIColor.white.cgColor
         
         tableView.estimatedRowHeight = 38
         tableView.rowHeight = UITableView.automaticDimension
@@ -65,6 +70,10 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        
     }
     
 }
