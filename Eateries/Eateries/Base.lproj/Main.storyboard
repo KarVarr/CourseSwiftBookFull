@@ -62,7 +62,6 @@
                                         <constraint firstItem="Ufo-vq-DcN" firstAttribute="leading" secondItem="b87-8i-JrV" secondAttribute="leading" constant="15" id="eU0-uY-4nR"/>
                                         <constraint firstAttribute="trailing" secondItem="nk9-jR-8ML" secondAttribute="trailing" id="lCz-Yk-onA"/>
                                         <constraint firstAttribute="bottom" secondItem="nk9-jR-8ML" secondAttribute="bottom" constant="16.666666666666657" id="qm1-yV-vUM"/>
-                                        <constraint firstAttribute="bottom" secondItem="nk9-jR-8ML" secondAttribute="bottom" constant="9" id="veQ-nC-1nv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -196,7 +195,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rateBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-CD-jLA">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPJ-nL-jsw">
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPJ-nL-jsw">
                                 <rect key="frame" x="314" y="75" width="63" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="OZj-y4-fV6"/>
@@ -204,7 +203,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="close"/>
                                 <connections>
-                                    <segue destination="Pgs-iw-8XF" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Wwk-TE-4OU"/>
+                                    <segue destination="Pgs-iw-8XF" kind="unwind" identifier="unwindSegueToDVC" unwindAction="unwindSegueWithSegue:" id="Wwk-TE-4OU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you like it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wws-4u-83g">
@@ -223,16 +222,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="99"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="bad"/>
+                                        <connections>
+                                            <action selector="rateRestaurantWithSender:" destination="sCm-kZ-4YH" eventType="touchUpInside" id="CD6-QL-DB0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85d-l1-wYL">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85d-l1-wYL">
                                         <rect key="frame" x="126" y="0.0" width="109" height="99"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="good"/>
+                                        <connections>
+                                            <action selector="rateRestaurantWithSender:" destination="sCm-kZ-4YH" eventType="touchUpInside" id="jAL-bO-M9f"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27u-7j-GE1">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27u-7j-GE1">
                                         <rect key="frame" x="252" y="0.0" width="109" height="99"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="brilliant"/>
+                                        <connections>
+                                            <action selector="rateRestaurantWithSender:" destination="sCm-kZ-4YH" eventType="touchUpInside" id="ry2-SP-6OW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

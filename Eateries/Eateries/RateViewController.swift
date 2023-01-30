@@ -8,18 +8,20 @@
 import UIKit
 
 class RateViewController: UIViewController {
-
+    
     @IBOutlet weak var ratingStackView: UIStackView!
     @IBOutlet weak var badButton: UIButton!
     @IBOutlet weak var goodButton: UIButton!
     @IBOutlet weak var brilliantButton: UIButton!
-
+    
+    var restRating: String?
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        UIView.animate(withDuration: 0.4) {
-//            self.ratingStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-//
-//        }
+        //        UIView.animate(withDuration: 0.4) {
+        //            self.ratingStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        //
+        //        }
         let buttonArray = [badButton, goodButton, brilliantButton]
         
         
@@ -29,7 +31,7 @@ class RateViewController: UIViewController {
             }
         }
         
-
+        
     }
     
     
@@ -46,15 +48,19 @@ class RateViewController: UIViewController {
         self.view.insertSubview(blurEffectView, at: 1)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func rateRestaurant(sender: UIButton) {
+        switch sender.tag {
+        case 0: restRating = "bad"
+        case 1: restRating = "good"
+        case 2: restRating = "brilliant"
+        default:
+            break
+        }
+        
+        performSegue(withIdentifier: "unwindSegueToDVC", sender: sender)
+            
+        
     }
-    */
-
+    
+    
 }
