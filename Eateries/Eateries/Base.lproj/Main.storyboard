@@ -255,6 +255,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nV1-eb-XI7"/>
+                    <connections>
+                        <outlet property="badButton" destination="z0M-Fo-e7Z" id="yk5-wh-aK0"/>
+                        <outlet property="brilliantButton" destination="27u-7j-GE1" id="iDz-e7-vZu"/>
+                        <outlet property="goodButton" destination="85d-l1-wYL" id="Adt-DK-d1Y"/>
+                        <outlet property="ratingStackView" destination="9Me-D9-Bz1" id="Agj-i6-gKW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TQ-s6-GgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Pgs-iw-8XF" userLabel="Exit" sceneMemberID="exit"/>
