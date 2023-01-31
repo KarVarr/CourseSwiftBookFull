@@ -80,6 +80,15 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
         rateButton.setImage(UIImage(named: rating), for: .normal)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapSegue" {
+            let dvc = segue.destination as! MapViewController
+            dvc.restaurant = self.restaurant
+        }
+    }
+    
+    
+    
 }
 
 

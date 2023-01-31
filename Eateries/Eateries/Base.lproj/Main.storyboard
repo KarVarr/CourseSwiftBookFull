@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJw-hM-pnY">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -107,6 +107,7 @@
                             <constraint firstAttribute="bottom" secondItem="iJw-hM-pnY" secondAttribute="bottom" id="u42-hd-PXP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UbG-aF-Vdv"/>
                     <connections>
                         <outlet property="mapView" destination="iJw-hM-pnY" id="vAp-0r-mn6"/>
                     </connections>
@@ -190,7 +191,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="YHm-aj-ea9" kind="presentation" identifier="mapSegue" modalPresentationStyle="fullScreen" id="kqb-nI-NO1"/>
+                                    <segue destination="sCm-kZ-4YH" kind="show" id="C1z-Wf-28J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-Ci-JFf">
@@ -201,6 +202,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="map"/>
+                                <connections>
+                                    <segue destination="YHm-aj-ea9" kind="show" identifier="mapSegue" id="s9R-fW-RwR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wc9-Rh-HD7"/>
@@ -239,10 +243,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rateBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-CD-jLA">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                             </imageView>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPJ-nL-jsw">
-                                <rect key="frame" x="314" y="75" width="63" height="64"/>
+                                <rect key="frame" x="314" y="119" width="63" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="OZj-y4-fV6"/>
                                 </constraints>
@@ -253,7 +257,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you like it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wws-4u-83g">
-                                <rect key="frame" x="89.666666666666686" y="294" width="214" height="42.333333333333314"/>
+                                <rect key="frame" x="89.666666666666686" y="338" width="214" height="42.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="AUz-p7-Ygx"/>
                                 </constraints>
@@ -262,7 +266,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-D9-Bz1">
-                                <rect key="frame" x="16" y="370" width="361" height="99"/>
+                                <rect key="frame" x="16" y="414" width="361" height="99"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-Fo-e7Z">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="99"/>
