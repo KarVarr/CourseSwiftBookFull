@@ -18,6 +18,7 @@
 		17A6AA56299409B4003BE599 /* NetworkSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6AA55299409B4003BE599 /* NetworkSevice.swift */; };
 		17A6AA5929940D2A003BE599 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6AA5829940D2A003BE599 /* CommentNetworkService.swift */; };
 		17A6AA5B29940DB3003BE599 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6AA5A29940DB3003BE599 /* GetCommentResponse.swift */; };
+		17A6AA5E29940E94003BE599 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6AA5D29940E94003BE599 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		17A6AA55299409B4003BE599 /* NetworkSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSevice.swift; sourceTree = "<group>"; };
 		17A6AA5829940D2A003BE599 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
 		17A6AA5A29940DB3003BE599 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
+		17A6AA5D29940E94003BE599 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		17A6AA472993FB47003BE599 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17A6AA5D29940E94003BE599 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,8 +142,8 @@
 		17A6AA4E2993FD83003BE599 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17A6AA5C29940E38003BE599 /* Responses */,
 				17A6AA522994049D003BE599 /* Comment.swift */,
-				17A6AA5A29940DB3003BE599 /* GetCommentResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,14 @@
 				17A6AA5829940D2A003BE599 /* CommentNetworkService.swift */,
 			);
 			path = CommentNetworkService;
+			sourceTree = "<group>";
+		};
+		17A6AA5C29940E38003BE599 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				17A6AA5A29940DB3003BE599 /* GetCommentResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				17A6AA56299409B4003BE599 /* NetworkSevice.swift in Sources */,
 				17A6AA362993FADA003BE599 /* SceneDelegate.swift in Sources */,
 				17A6AA5B29940DB3003BE599 /* GetCommentResponse.swift in Sources */,
+				17A6AA5E29940E94003BE599 /* NetworkError.swift in Sources */,
 				17A6AA5129940344003BE599 /* CommentCell.swift in Sources */,
 				17A6AA5929940D2A003BE599 /* CommentNetworkService.swift in Sources */,
 			);

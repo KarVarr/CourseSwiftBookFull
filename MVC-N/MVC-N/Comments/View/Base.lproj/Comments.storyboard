@@ -37,7 +37,7 @@
                                                     <rect key="frame" x="0.0" y="32" width="393" height="128"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="12n-ss-icB"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="12n-ss-icB"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -46,6 +46,7 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hIF-5G-Qiy" secondAttribute="bottom" constant="7" id="AlH-6B-dJJ"/>
                                                 <constraint firstItem="Knu-sP-ddM" firstAttribute="leading" secondItem="qyJ-RM-s16" secondAttribute="leadingMargin" id="E8B-ch-V5j"/>
                                                 <constraint firstAttribute="trailing" secondItem="hIF-5G-Qiy" secondAttribute="trailing" id="FUO-fr-2V6"/>
                                                 <constraint firstItem="hIF-5G-Qiy" firstAttribute="leading" secondItem="qyJ-RM-s16" secondAttribute="leading" id="N4e-Hb-VcU"/>
